@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Agriculture AI</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            🌱  AgriNova
+            <br>
+AI-Powered Smart Farming Assistant
+        </a>
+
+         <ul class="nav-menu">
+
+        <li><a href="#home" data-i18n="home">Home</a></li>
+        <li><a href="#about" data-i18n="about">About</a></li>
+        <li><a href="#features" data-i18n="features">Features</a></li>
+        <li><a href="#disease" data-i18n="disease">Disease AI</a></li>
+        <li><a href="#analytics" data-i18n="analytics">Analytics</a></li>
+        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+      
+        </ul>
+  <div class="nav-actions">
+
+            <button id="theme-btn" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="language-selector">
+
+                <i class="fas fa-globe"></i>
+
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="mr">मराठी</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+
+            </div>
+
+     <a href="{{ url_for('logout') }}" class="login-btn"data-i18n="logout">
+     Logout</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+      <span class="badge" data-i18n="heroBadge">
+    🌾 AI Powered Farming
+</span>
+
+<h1 data-i18n="heroTitle">
+    Future of Smart Agriculture
+</h1>
+
+<p data-i18n="heroDescription">
+    Detect crop diseases, monitor weather,
+    receive fertilizer recommendations and
+    manage irrigation using Artificial Intelligence.
+</p>
+
+<div class="hero-buttons">
+    <a href="#" class="btn-primary" data-i18n="getStarted">
+        Get Started</a>
+
+    <a href="#" class="btn-secondary" data-i18n="liveDemo">
+    Live Demo </a>
+</div>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/agri2.png') }}" alt="Smart Agriculture AI">
+    </div>
+
+</section>
+<!-- ================= STATISTICS ================= -->
+
+<section  id="statistics"class="stats">
+
+    <div class="stat-card">
+        <i class="fas fa-seedling"></i>
+        <h2>500+</h2>
+        <p data-i18n="farmersConnected">Farmers Connected</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fas fa-cloud-sun"></i>
+        <h2>99%</h2>
+       <p data-i18n="weatherAccuracy">Weather Accuracy</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fas fa-leaf"></i>
+        <h2>250+</h2>
+       <p data-i18n="diseasesDetected">Crop Diseases Detected</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fas fa-tint"></i>
+        <h2>45%</h2>
+       <p data-i18n="waterSaved">Water Saved</p>
+    </div>
+
+</section>
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="features">
+
+    <div class="section-title">
+        <span data-i18n="ourFeatures">Our AI Features</span>
+
+        <h2 data-i18n="smartSolutions">Smart Agriculture Solutions</h2>
+
+      <p data-i18n="featuresDescription">
+       AI-powered tools that help farmers increase productivity and reduce costs.</p>
+
+</div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <i class="fas fa-camera"></i>
+            <h3 data-i18n="diseaseDetection"> Crop Disease Detection</h3>          
+        <p data-i18n="diseaseDetectionDesc">
+           Upload a crop image and detect diseases instantly using AI.
+        </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-cloud-sun-rain"></i>
+           <h3 data-i18n="weatherPrediction"> Weather Prediction</h3>
+        <p data-i18n="weatherPredictionDesc">
+              Get real-time weather forecasts and farming alerts.
+        </p>
+</div>
+
+        <div class="feature-card">
+            <i class="fas fa-tint"></i>
+            <h3 data-i18n="smartIrrigation">Smart Irrigation</h3>
+
+         <p data-i18n="smartIrrigationDesc">
+              Receive irrigation alerts based on soil moisture and weather.
+        </p>
+</div>
+
+        <div class="feature-card">
+            <i class="fas fa-seedling"></i>
+            <h3 data-i18n="fertilizerRecommendation">Fertilizer Recommendation</h3>
+            <p data-i18n="fertilizerRecommendationDesc">
+                AI recommends the best fertilizer based on crop and soil data.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='images/agri3.png') }}" alt="Crop">
+    </div>
+
+    <div class="about-content">
+    <span data-i18n="aboutPlatform">About Our Platform</span>
+
+     <h2 data-i18n="empoweringFarmers">
+          Empowering Farmers with Artificial Intelligence
+    </h2>
+
+<p data-i18n="aboutDescription">
+    Smart Agriculture AI helps farmers make better decisions using
+    Artificial Intelligence. The platform detects crop diseases,
+    predicts weather, recommends fertilizers, and provides irrigation
+    alerts for better farming.
+</p>
+
+        <div class="about-list">
+
+       <div>
+           <i class="fas fa-check-circle"></i>
+           <span data-i18n="aiDisease">AI Disease Detection</span>
+        </div>
+
+        <div>
+            <i class="fas fa-check-circle"></i>
+            <span data-i18n="liveWeather">Live Weather Forecast</span>
+        </div>
+
+        <div>
+           <i class="fas fa-check-circle"></i>
+           <span data-i18n="irrigationSystem">Smart Irrigation System</span>
+        </div>
+
+        <div>
+              <i class="fas fa-check-circle"></i>
+             <span data-i18n="fertilizerRec">Fertilizer Recommendation</span>
+        </div>
+
+        </div>
+
+       <a href="#" class="btn-primary" data-i18n="learnMore"> Learn More </a>
+   
+
+    </div>
+
+</section>
+<!-- ================= DISEASE AI ================= -->
+
+<section id="disease" class="disease">
+
+    <div class="section-title">
+      <span data-i18n="diseaseDetectionTitle">
+          AI Disease Detection
+      </span>
+
+     <h2 id="diseaseTitle" data-i18n="uploadCrop">
+        Upload Crop Image
+     </h2>
+
+     <p data-i18n="uploadDescription">
+         Upload your crop image and let AI identify diseases instantly.
+     </p>
+    </div>
+
+    <div class="disease-container">
+
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+
+    <div class="upload-box">
+
+        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+
+       <h2 id="uploadTitle" data-i18n="uploadCrop">
+              Upload Crop Image
+        </h2>
+
+        <p data-i18n="dragDrop">
+             Drag & Drop your image here
+        </p>
+
+        <span data-i18n="or">or</span> 
+
+        <input type="file" name="image" id="fileInput" required>
+
+        <label for="fileInput" class="upload-btn" data-i18n="chooseImage">
+           Choose Image
+        </label>
+
+      <button type="submit" id="analyzeBtn" class="analyze-btn">
+    <i class="fas fa-magnifying-glass"></i>
+    <span data-i18n="analyzeAI">Analyze with AI</span>
+    </button>
+    </div>
+
+</form>
+
+{% if image_path %}
+<div class="result-box">
+
+    <h2 id="resultTitle">AI Analysis Result</h2>
+
+    <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image">
+
+    <h3>{{ disease }}</h3>
+
+    <p>{{ confidence }}</p>
+
+    <p>{{ recommendation }}</p>
+
+</div>
+{% endif %}
+    </div>
+
+</section>"
+{% if disease %}
+<div class="result-card">
+
+    <h2>🌱 AI Analysis Result</h2>
+
+    <div class="result-item">
+        <strong>Disease:</strong>
+        <span>{{ disease }}</span>
+    </div>
+
+    <div class="result-item">
+        <strong>Confidence:</strong>
+        <span>{{ confidence }}</span>
+    </div>
+
+    <div class="result-item">
+        <strong>Recommendation:</strong>
+        <span>{{ recommendation }}</span>
+    </div>
+
+</div>
+{% endif %}
+
+
+<!-- ===============================
+     AI FERTILIZER RECOMMENDATION
+================================ -->
+
+<section id="fertilizer" class="fertilizer-section">
+
+    <div class="section-title">
+
+        <span data-i18n="fertilizerAI">
+            🌱 AI Fertilizer Recommendation
+        </span>
+
+        <h2 data-i18n="findFertilizer">
+            Find the Right Fertilizer for Your Crop
+        </h2>
+
+        <p data-i18n="fertilizerDescription">
+            Enter your crop and soil information to get a suitable fertilizer recommendation.
+        </p>
+
+    </div>
+
+
+    <div class="fertilizer-container">
+
+        <form action="/fertilizer" method="POST" class="fertilizer-form">
+
+            <!-- Language -->
+            <input
+                type="hidden"
+                name="language"
+                id="fertilizerLanguage"
+                value="en"
+            >
+
+
+            <!-- Crop -->
+
+            <div class="form-group">
+
+                <label data-i18n="selectCrop">
+                    🌱 Select Crop
+                </label>
+
+                <select name="crop" id="crop" required>
+
+                    <option value="" data-i18n="selectCropOption">
+                        Select Crop
+                    </option>
+
+                    <option value="Tomato" data-i18n="tomato">
+                        Tomato
+                    </option>
+
+                    <option value="Potato" data-i18n="potato">
+                        Potato
+                    </option>
+
+                    <option value="Corn" data-i18n="corn">
+                        Corn
+                    </option>
+
+                    <option value="Apple" data-i18n="apple">
+                        Apple
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Soil -->
+
+            <div class="form-group">
+
+                <label data-i18n="soilType">
+                    🌾 Soil Type
+                </label>
+
+                <select name="soil" id="soil" required>
+
+                    <option value="" data-i18n="selectSoilOption">
+                        Select Soil Type
+                    </option>
+
+                    <option value="Loamy" data-i18n="loamy">
+                        Loamy
+                    </option>
+
+                    <option value="Clay" data-i18n="clay">
+                        Clay
+                    </option>
+
+                    <option value="Sandy" data-i18n="sandy">
+                        Sandy
+                    </option>
+
+                    <option value="Black Soil" data-i18n="blackSoil">
+                        Black Soil
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Nitrogen -->
+
+            <div class="form-group">
+
+                <label data-i18n="nitrogen">
+                    🧪 Nitrogen (N)
+                </label>
+
+                <input
+                    type="number"
+                    name="nitrogen"
+                    placeholder="Enter N value"
+                    data-i18n-placeholder="enterN"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Phosphorus -->
+
+            <div class="form-group">
+
+                <label data-i18n="phosphorus">
+                    🧪 Phosphorus (P)
+                </label>
+
+                <input
+                    type="number"
+                    name="phosphorus"
+                    placeholder="Enter P value"
+                    data-i18n-placeholder="enterP"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Potassium -->
+
+            <div class="form-group">
+
+                <label data-i18n="potassium">
+                    🧪 Potassium (K)
+                </label>
+
+                <input
+                    type="number"
+                    name="potassium"
+                    placeholder="Enter K value"
+                    data-i18n-placeholder="enterK"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Button -->
+
+            <button type="submit" class="fertilizer-btn">
+
+                🧪
+                <span data-i18n="getFertilizer">
+                    Get Fertilizer Recommendation
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     CROP RECOMMENDATION
+========================================== -->
+
+<section id="crop-recommendation" class="crop-recommendation-section">
+
+    <div class="section-title">
+        <h2>🌾 Crop Recommendation</h2>
+        <p>
+            Get the best crop recommendation based on soil and weather conditions.
+        </p>
+    </div>
+
+    <div class="crop-form-card">
+
+        <form id="cropRecommendationForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="nitrogen">Nitrogen (N)</label>
+                    <input
+                        type="number"
+                        id="nitrogen"
+                        name="nitrogen"
+                        placeholder="Enter Nitrogen"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phosphorus">Phosphorus (P)</label>
+                    <input
+                        type="number"
+                        id="phosphorus"
+                        name="phosphorus"
+                        placeholder="Enter Phosphorus"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="potassium">Potassium (K)</label>
+                    <input
+                        type="number"
+                        id="potassium"
+                        name="potassium"
+                        placeholder="Enter Potassium"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cropTemperature">Temperature (°C)</label>
+                    <input
+                        type="number"
+                        step="0.1"
+                        id="cropTemperature"
+                        name="temperature"
+                        placeholder="Enter Temperature"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cropHumidity">Humidity (%)</label>
+                    <input
+                        type="number"
+                        step="0.1"
+                        id="cropHumidity"
+                        name="humidity"
+                        placeholder="Enter Humidity"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="rainfall">Rainfall (mm)</label>
+                    <input
+                        type="number"
+                        step="0.1"
+                        id="rainfall"
+                        name="rainfall"
+                        placeholder="Enter Rainfall"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <button type="submit" class="crop-recommend-btn">
+                🌱 Recommend Crop
+            </button>
+
+        </form>
+
+        <!-- Result -->
+
+        <div id="cropRecommendationResult" class="crop-result">
+
+            <h3>🌾 Recommended Crop</h3>
+
+            <p id="recommendedCrop">
+                Enter your soil and weather details to get a recommendation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     WEATHER DASHBOARD
+========================= -->
+
+<section id="weather-section"class="weather-section">
+
+    <div class="section-title">
+       <span data-i18n="liveWeatherDashboard">
+             Live Weather Dashboard
+       </span>
+
+       <h2 id="weatherTitle" data-i18n="currentFarmWeather">
+             Current Farm Weather
+        </h2>
+
+       <p data-i18n="weatherDescription">
+               Monitor weather conditions before making farming decisions.
+        </p>
+    </div>
+
+    {% if weather %}
+
+    <div class="weather-location">
+        <i class="fas fa-location-dot"></i>
+        <span>{{ weather.city if weather.city else "Aurangabad" }}</span>
+        <span class="weather-description">
+            {{ weather.description }}
+        </span>
+    </div>
+
+    <div class="weather-grid">
+
+        <div class="weather-card">
+            <i class="fas fa-temperature-high"></i>
+            <h3 data-i18n="temperature">Temperature</h3>
+            <h2>{{ weather.temperature }}°C</h2>
+        </div>
+
+        <div class="weather-card">
+            <i class="fas fa-tint"></i>
+           <h3 data-i18n="humidity">Humidity</h3>
+            <h2>{{ weather.humidity }}%</h2>
+        </div>
+
+        <div class="weather-card">
+            <i class="fas fa-wind"></i>
+           <h3 data-i18n="windSpeed">Wind Speed</h3>
+            <h2>{{ weather.wind }} m/s</h2>
+        </div>
+
+        <div class="weather-card">
+            <i class="fas fa-cloud"></i>
+           <h3 data-i18n="condition">Condition</h3>
+            <h2>{{ weather.description }}</h2>
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <div class="weather-error">
+        <i class="fas fa-cloud-slash"></i>
+       <p data-i18n="weatherUnavailable"> Weather data unavailable.</p>
+    </div>
+
+    {% endif %}
+
+</section>
+
+<!--=========== Smart Irrigation=========== -->
+<section id="irrigation" class="irrigation-section">
+
+    <div class="section-title">
+        <h2 data-i18n="irrigationTitle">Smart Irrigation</h2>
+
+        <p data-i18n="irrigationSubtitle">
+            AI-based irrigation recommendation for your crop
+        </p>
+    </div>
+
+    <div class="irrigation-card">
+
+        <h3 id="irrigationStatus" data-i18n="irrigationStatus">
+            Checking irrigation status...
+        </h3>
+
+        <div class="irrigation-info">
+
+            <div>
+                <span data-i18n="soilMoisture">🌱 Soil Moisture</span>
+                <strong id="soilMoisture">--%</strong>
+            </div>
+
+            <div>
+                <span data-i18n="temperature">🌡️ Temperature</span>
+                <strong id="irrigationTemp">--°C</strong>
+            </div>
+
+            <div>
+                <span data-i18n="humidity">💧 Humidity</span>
+                <strong id="irrigationHumidity">--%</strong>
+            </div>
+
+            <div>
+                <span data-i18n="bestTime">⏰ Best Time</span>
+                <strong id="bestIrrigationTime">--</strong>
+            </div>
+
+        </div>
+
+        <div class="irrigation-recommendation">
+
+            <strong data-i18n="recommendation">
+                🌾 Recommendation:
+            </strong>
+
+            <p id="irrigationRecommendation"
+               data-i18n="loadingRecommendation">
+                Loading recommendation...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= AI ANALYTICS ================= -->
+
+<section id="analytics" class="analytics">
+
+    <div class="section-title">
+       <span data-i18n="analyticsDashboard">
+            AI Analytics Dashboard
+        </span>
+
+        <h2 data-i18n="farmPerformance">
+            Farm Performance Overview
+        </h2>
+
+        <p data-i18n="analyticsDescription">
+            AI-generated insights to improve productivity and crop health.
+         </p>
+    </div>
+
+    <div class="analytics-grid">
+
+        <div class="analytics-card">
+            <i class="fas fa-seedling"></i>
+            <h3 data-i18n="cropHealth">Crop Health</h3>
+            <h2>95%</h2>
+            <p data-i18n="healthyCrops">Healthy Crops</p>
+            
+        </div>
+
+        <div class="analytics-card">
+            <i class="fas fa-flask"></i>
+            <h3 data-i18n="soilQuality">Soil Quality</h3>
+            <h2>89%</h2>
+            <p data-i18n="goodSoil">Good Soil Condition</p>
+        </div>
+
+        <div class="analytics-card">
+            <i class="fas fa-chart-line"></i>
+            <h3 data-i18n="productivity">Productivity</h3>
+            <h2>+22%</h2>
+            <p data-i18n="higherYield">Higher Yield</p>
+        </div>
+
+        <div class="analytics-card">
+            <i class="fas fa-coins"></i>
+            <h3 data-i18n="estimatedProfit">Estimated Profit</h3>
+            <h2>₹1.8L</h2>
+            <p data-i18n="currentSeason">Current Season</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+       <span data-i18n="contactUs">
+            Contact Us
+       </span>
+
+        <h2 data-i18n="growTogether">
+             Let's Grow Agriculture Together 🌱
+        </h2>
+
+        <p data-i18n="contactDescription">
+             Have questions or suggestions? Get in touch with us.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Left Side -->
+
+        <div class="contact-info">
+
+          <h3 data-i18n="contactInformation">
+              Contact Information
+          </h3>
+
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Aurangabad, Maharashtra, India</span>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <span>support@smartagri.ai</span>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <span>+91 98765 43210</span>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <form class="contact-form">
+
+           <input type="text"
+       placeholder="Your Name"
+       data-i18n-placeholder="yourName">
+
+              <input type="email"
+                   placeholder="Your Email"
+                   data-i18n-placeholder="yourEmail">
+
+               <input type="text"
+                    placeholder="Phone Number"
+                    data-i18n-placeholder="phoneNumber">
+
+                <textarea rows="6"
+                      placeholder="Your Message"
+                     data-i18n-placeholder="yourMessage">
+                </textarea>
+
+                <button type="submit" data-i18n="sendMessage">
+                     Send Message
+                </button>
+        </form>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-box">
+
+            <h2 id="title">🌱 Agrinova</h2>
+
+            <p>
+                AI-powered farming platform that helps farmers
+                increase productivity with smart technology.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3 data-i18n="quickLinks">Quick Links</h3>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Services -->
+        <div class="footer-box">
+
+            <h3 data-i18n="services">Services</h3>
+
+            <ul>
+                <li>Crop Disease Detection</li>
+                <li>Weather Prediction</li>
+                <li>Smart Irrigation</li>
+                <li>Fertilizer Recommendation</li>
+            </ul>
+
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-box">
+
+            <h3 data-i18n="followUs">Follow Us</h3>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+       <div class="footer-box">
+
+    <h3 data-i18n="quickLinks">Quick Links</h3>
+
+    <ul class="footer-links">
+
+        <li>
+            <a href="#home" data-i18n="home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about" data-i18n="about">About</a>
+        </li>
+
+        <li>
+            <a href="#features" data-i18n="features">Features</a>
+        </li>
+
+        <li>
+            <a href="#contact" data-i18n="contact">Contact</a>
+        </li>
+
+         </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+
+        Created by Mayuri Kadam © 2026 Agrinova- Ai power smart farming assistant.
+
+    </div>
+
+</footer>
+<button id="topBtn">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<!-- AI Chatbot Button -->
+<button id="chatbot-btn" class="chatbot-btn" title="AI Farmer Assistant">
+    <i class="fas fa-robot"></i>
+</button>
+<!-- AI Chatbot Window -->
+<div id="chatbot-window" class="chatbot-window">
+
+    <div class="chatbot-header">
+        <div>
+            <i class="fas fa-robot"></i>
+            <span>AgriNova AI Assistant</span>
+        </div>
+
+        <button id="close-chatbot">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+        <div class="bot-message">
+            🌱 Hello! I am AgriNova AI Assistant.<br>
+            Ask me anything about farming, crops or diseases.
+        </div>
+    </div>
+
+    <div class="chatbot-input">
+        <input
+            type="text"
+            id="chat-input"
+            placeholder="Ask your farming question..."
+        >
+
+        <button id="send-chat">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
